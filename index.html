@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Permissions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .read { color: blue; font-weight: bold; }
+    .write { color: green; font-weight: bold; }
+    .admin { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>GitHub Permissions</h1>
+  <table id="permissions-table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Team</th>
+        <th>Repository</th>
+        <th>Permission</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script type="module" src="./src/main.ts" ></script>
+</body>
+</html>

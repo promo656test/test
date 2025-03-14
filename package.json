@@ -1,0 +1,25 @@
+{
+    "name": "permission-manager",
+    "version": "1.0.0",
+    "description": "Permission manager",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "update-permissions": "node dist/updatePermissions.js --run-once",
+      "watch-permissions": "node dist/updatePermissions.js",
+      "preview": "vite preview"
+    },
+    "devDependencies": {
+      "@types/node": "^22.13.10",
+      "typescript": "~5.7.2",
+      "vite": "^6.2.0"
+    },
+    "dependencies": {
+      "@octokit/rest": "^21.1.1",
+      "dotenv": "^16.4.7",
+      "ts-node": "^10.9.2"
+    }
+  }
+  
