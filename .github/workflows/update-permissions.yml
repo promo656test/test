@@ -28,5 +28,5 @@ jobs:
         
       - name: Run update permissions script
         env:
-          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
+          API_GITHUB_TOKEN: ${{ vars.API_GITHUB_TOKEN }}
         run: yarn update-permissions
