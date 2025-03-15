@@ -12,7 +12,7 @@ const membersPermissions: PermissionsConfig = {
           name: 'team1',
           members: ['espostnov'],
           repositories: [
-            { name: 'test3-repo-1', permissions: ['read'] },
+            { name: 'test3-repo-1', permissions: ['write'] },
 
           ]
         }
