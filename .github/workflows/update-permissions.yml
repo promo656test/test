@@ -11,7 +11,7 @@ jobs:
   update-permissions:
     runs-on: ubuntu-latest
     env:
-      API_GITHUB_TOKEN: ${{ env.API_GITHUB_TOKEN }}
+      API_GITHUB_TOKEN: ${{ var.API_GITHUB_TOKEN }}
 
     steps:
 
