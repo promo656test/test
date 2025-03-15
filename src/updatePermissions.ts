@@ -6,6 +6,7 @@ import type { OctokitPermission, Permission } from "./types";
 import "dotenv/config";
 
 const GITHUB_TOKEN = process.env.API_GITHUB_TOKEN;
+console.log('GITHUB_TOKEN', GITHUB_TOKEN);
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
 const __filename = fileURLToPath(import.meta.url);
