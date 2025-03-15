@@ -10,13 +10,14 @@ on:
 jobs:
   update-permissions:
     runs-on: ubuntu-latest
-    env:
-      API_GITHUB_TOKEN: ${{ API_GITHUB_TOKEN }}
 
     steps:
 
-      - name: Use environment variable
+      - name: Use environment variable env
         run: echo "TOKEN is ${{ env.API_GITHUB_TOKEN }}"
+
+      - name: Use environment variable var
+        run: echo "TOKEN is ${{ var.API_GITHUB_TOKEN }}"
 
       - name: Use runtime variable
         run: echo "TOKEN is $API_GITHUB_TOKEN"
