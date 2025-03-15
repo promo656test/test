@@ -10,8 +10,17 @@ on:
 jobs:
   update-permissions:
     runs-on: ubuntu-latest
+    env:
+      API_GITHUB_TOKEN: ${{ env.API_GITHUB_TOKEN }}
 
     steps:
+
+      - name: Use environment variable
+        run: echo "TOKEN is ${{ env.API_GITHUB_TOKEN }}"
+
+      - name: Use runtime variable
+        run: echo "TOKEN is $API_GITHUB_TOKEN"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
