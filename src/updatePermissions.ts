@@ -6,7 +6,7 @@ import type { OctokitPermission, Permission } from "./types";
 import "dotenv/config";
 
 const GITHUB_TOKEN = process.env.API_GITHUB_TOKEN;
-console.log('GITHUB_TOKEN', GITHUB_TOKEN);
+
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
 const __filename = fileURLToPath(import.meta.url);
@@ -104,7 +104,7 @@ export async function startWatching() {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const runOnce = process.argv.includes('--run-once');
-  
+  console.log('GITHUB_TOKEN', GITHUB_TOKEN);
   if (runOnce) {
     console.log('🚀 Running permissions update once...');
     updatePermissions().then(() => {
