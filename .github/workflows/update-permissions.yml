@@ -13,15 +13,6 @@ jobs:
 
     steps:
 
-      - name: Use environment variable env
-        run: echo "TOKEN is ${{ env.API_GITHUB_TOKEN }}"
-
-      - name: Use environment variable var
-        run: echo "TOKEN is ${{ var.API_GITHUB_TOKEN }}"
-
-      - name: Use runtime variable
-        run: echo "TOKEN is $API_GITHUB_TOKEN"
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -38,5 +29,5 @@ jobs:
         
       - name: Run update permissions script
         env:
-          API_GITHUB_TOKEN: ${{ env.API_GITHUB_TOKEN }}
+          API_GITHUB_TOKEN: ${{ secrets.API_GITHUB_TOKEN }}
         run: yarn update-permissions
